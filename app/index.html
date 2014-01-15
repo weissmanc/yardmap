@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- Add {% autoescape true %} -- for JINJA template engine -->
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+
+<title>MAGNET BOARD {{board}} </title>
+
+<!-- Hosted Libraries -->
+<!--<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>-->
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript"src="clientscript/dragSymbol.js" charset="utf-8"></script>
+<script type="text/javascript"src="clientscript/server.js" charset="utf-8"></script>
+<script type="text/javascript"src="clientscript/app.js" charset="utf-8"></script>
+<script type="text/javascript"src="clientscript/appUtil.js" charset="utf-8"></script>
+<script type="text/javascript"src="clientscript/serverStub.js" charset="utf-8"></script>
+
+<!-- Page scripts -->
+<script type="text/javascript">
+
+
+</script>
+
+
+</head>
+<body onload="app.init()">
+
+<!-- controls pane -->
+<div id="controls" style="float:left;" draggable='false'  >
+<span style="display:block">DRAG TO MAP"</span>
+<img src="assets/trainSymbolLeftSmall.PNG" class="allowedSymbol" />
+<img src="assets/trainSymbolMiddleSmall.PNG" class="allowedSymbol" />
+<img src="assets/trainSymbolRightSmall.PNG" class="allowedSymbol" />
+<img src="assets/workzoneSmall.PNG" class="allowedSymbol" />
+<br />
+<span style="display:block">TRASH</span>
+<img id="trash" src="assets/MQM_Trash_Can.png" draggable="false" />
+<br /><br />
+<button id="groupPb" type="button" style="display:block">GROUP SELECTED</button>
+<button id="cancelSelectPb" type="button"  style="display:block">CANCEL SELECTION</button>
+
+</div>
+
+<!-- Stage where the map goes -->
+<div id="stage" style="float:left;" > <!-- ondrop="newSymbolDragDrop.drop()"
+    ondragover="newSymbolDragDrop.dragover()" draggable="false"> -->
+
+    <!-- TODO - make this a variable -->
+    <img draggable="false" src="RED-YARD.png" />
+
+        
+</div>
+
+
+
+</body>
+</html>
+<!-- later for JINJA {% endautoescape %} -->
